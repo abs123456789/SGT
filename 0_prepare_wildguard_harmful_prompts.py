@@ -1,13 +1,12 @@
 import os
 import argparse
 from pathlib import Path
-
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from datasets import load_dataset
 
 def main():
     # 1) 加载同级目录 .env
-    load_dotenv()  # 默认会找当前工作目录的 .env
+    # load_dotenv()  # 默认会找当前工作目录的 .env
     # 更稳：指定为“脚本同级目录”的 .env
     # load_dotenv(Path(__file__).with_name(".env"))
 
