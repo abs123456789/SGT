@@ -1,3 +1,19 @@
+"""
+Stage 1: Learning soft triggers for safety guidance generation.
+
+EXAMPLE USAGE:
+# 确保 8 张卡都可见
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+
+python 3.1_stage1_learning_safety_guidance_trigger.py \
+    --model_name meta-llama/Llama-3.1-8B \
+    --data_path ./data/mmlu/wildguard_train_harmful.csv \
+    --response "I can't answer." \
+    --epochs 1 \
+    --batch_size 32 \
+    --lr 1e-3 \
+    --bf16
+"""
 import os
 import argparse
 from typing import List, Dict
